@@ -1,4 +1,4 @@
-# Проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+﻿# Проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Юлия Добрынина](https://htmlacademy.ru/profile/id40252).
 * Наставник: `Unknown`.
@@ -6,10 +6,10 @@
 ### Немного о себе
 
 ###### Вы прошли интенсивный онлайн-курс «Базовый HTML и CSS»?
-`Да, успешно | Да, но не защитил проект | Нет, я сразу записался на продвинутый`.
+`Да, успешно`.
 
 ###### Вы прошли интенсивный онлайн-курс «Базовый JavaScript»?
-`Да, успешно | Да, но не защитил проект | Нет, я сразу записался на продвинутый`.
+`Нет, я сразу записался на продвинутый`.
 
 ---
 
