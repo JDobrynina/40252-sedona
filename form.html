@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Гостиницы</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li>
+					<a href="#">Информация</a>
+					<a class="btn-close" href="#"><img src=""></a>
+				</li>
+				<li>
+					<a href="#">Оставить отзыв</a>
+				</li>
+				<li>
+					<a href="#">Блог шерифа</a>
+				</li>
+				<li>
+					<a href="#">Гостиницы</a>
+				</li>
+			</ul>
+		</nav>
+	  </header>
+	  <div class="center-wrapper">
+			<div class="subnavigation">
+				<div class="logo"><a href="index.html"><img src="#"></a></div>
+				<div class="submenu"><a href="#"><img src="#"></a></div>				
+			</div>
+			<img href="img-sedona" src="#" alt="">	  
+			<div class="text-block">
+		  	<div class="title-block">Оставьте свой отзыв</div>
+		  	<div class="body-text">Помогите нашим отелям стать лучше! Оставьте свой отзыв о них, а также о посещенных вами достопримечательностях</div>
+	    </div>	
+	    <form id="review" class="review" action="#"></form>
+	    <div class="block-review">
+        <div class="block-review-title">Представьтесь, пожалуйста:</div>
+		    	<table class="table-guest">
+		    		<tr>
+		    			<td>Фамилия:<span class="highlighted">*</span></td>
+		    		</tr>
+		    		<tr>
+		    			<td><input type="text" name="surname" form="review" value="Иванов"></td>
+		    		</tr>		
+		    		<tr>
+		    			<td>Имя:<span class="highlighted">*</span></td>
+		    		</tr>
+		    		<tr>
+		    			<td><input type="text" name="first-name" form="review" value="Петр"></td>
+		    		</tr>		
+		    		<tr>
+		    			<td>Отчество:<span class="highlighted">*</span></td>
+		    		</tr>
+		    		<tr>
+		    			<td><input type="text" name="middle-name" form="review" value="Александрович"></td>
+		    		</tr>	
+		    	</table>
+	    </div>
+	    <div class="block-review">
+	    	<div class="block-review-title">Ваше общее впечатление:</div>
+				<div><input type="radio" name="impression" form="review" value="positive">Скорее положительное</div>
+				<div><input type="radio" name="impression" form="review" value="negative">Скорее отрицательное</div>
+	    </div>
+	    <div class="block-review">
+	    	<div class="block-review-title">Даты вашей поездки:</div>
+	    	<div class="question">Дата приезда:<span class="highlighted">*</span></div>
+	    	<div><input type="text" name="arrival-date" form="review" value="4 июля 2015"></div>
+	    	<div class="question">Длительность пребывания:<span class="highlighted">*</span></div>
+	    	<div class="count">
+		    	<div class="less"></div>
+		    	<div class="number-days"><input type="text" name="input-number-days" form="review" value="14"></div>	
+		    	<div class="more"></div>
+	    	</div>
+	    	<div class="question">Дата отъезда:<span class="highlighted">*</span></div>
+	    	<div><input type="text" name="departure-date" form="review" value="28 июля 2015"></div>
+	    </div>
+	    <div class="block-review">
+	    	<div class="block-review-title">Кол-во путешественников:</div>
+				<div class="question">Количество путешественников:<span class="highlighted">*</span></div>
+	    	<div class="count">
+		    	<div class="less"></div>
+		    	<div class="number-travelers"><input type="text" name="input-number-travelers" form="review" value="2"></div>	
+		    	<div class="more"></div>
+	    	</div>
+	    	<table>
+	    		<tr><td>№</td><td>Фамилия:<span class="highlighted">*</span></td></tr>
+	    		<tr><td>1</td><td><input type="text" name="surname-traveler" form="review" value="Иванов"></td></tr>
+	    		<tr><td></td><td>Имя:<span class="highlighted">*</span></td></tr>
+	    		<tr><td></td><td><input type="text" name="first-name-traveler" form="review" value="Петр"></td></tr>
+	    		<tr><td></td><td>Отчество:<span class="highlighted">*</span></td></tr>
+	    		<tr><td></td><td><input type="text" name="middle-name-traveler" form="review" value="Александрович"></td></tr>
+	    	</table>
+	    	<table>
+	    		<tr><td>№</td><td>Фамилия:<span class="highlighted">*</span></td></tr>
+	    		<tr><td>2</td><td><input type="text" name="surname-traveler" form="review" value="Иванов"></td></tr>
+	    		<tr><td></td><td>Имя:<span class="highlighted">*</span></td></tr>
+	    		<tr><td></td><td><input type="text" name="first-name-traveler" form="review" value="Петр"></td></tr>
+	    		<tr><td></td><td>Отчество:<span class="highlighted">*</span></td></tr>
+	    		<tr><td></td><td><input type="text" name="middle-name-traveler" form="review" value="Александрович"></td></tr>
+	    	</table>
+	    </div>
+	    <div class="block-review">
+	    	<div class="block-review-title">Посещенные достопримечательности:</div>
+				<div><input type="checkbox" name="attraction1" form="review" value="bridge" checked>Мост Дъявола</div>
+				<div><input type="checkbox" name="attraction2" form="review" value="park">Слайд-парк</div>
+				<div><input type="checkbox" name="attraction3" form="review" value="mountain" checked>Гора-Колокол</div>
+				<div><input type="checkbox" name="attraction4" form="review" value="rocks" checked>Красные скалы</div>
+	    </div>
+	    <div class="block-review">
+				<div class="block-review-title">Загрузите фотографии:</div>
+				<div><a class="btn-select-photos" href="#">Выбрать фотографии</a></div>
+				<div class="photos">
+					<div class="photo">
+						<img src="">
+					</div>
+					<div class="photo">
+						<img src="">
+					</div>
+					<div class="photo">
+						<img src="">
+					</div>
+					<div class="photo">
+						<img src="">
+					</div>
+					<div class="photo">
+						<img src="">
+					</div>
+					<div class="photo">
+						<img src="">
+					</div>
+					<div class="photo">
+						<img src="">
+					</div>
+				</div>
+	    </div>
+      <input type="submit" value="Отправить отзыв">
+	  </div>
+		<footer>
+			<div class="hashtag">#visitsedona</div>
+		  	<div class="footer-block hashtag">#visitsedona</div>
+		    <div class="footer-block social">
+		      <a href="#" class="social social-tw"><i class="icon-twitter"></i></a>
+		      <a href="#" class="social social-fb"><i class="icon-facebook"></i></a>
+		      <a href="#" class="social social-youtube"><i class="icon-youtube"></i></a>
+		    </div>
+		</footer>
+</body>
+</html>
