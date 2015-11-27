@@ -26,13 +26,11 @@
           </li>
         </ul>
       </nav>
-      <div class="logo" class="logo">
-        <a class="logo__link" href="#">
-          <img class="logo__img" src="">
-        </a>    
+      <div class="logo">
+        <a href="#"><img src=""></a>
       </div>
-      <a class="sub-navigation__link" href="#">
-        <img class="sub-navigation__img" src="#">
+      <a class="menu-toggle__link" href="#">
+        <img class="menu-toggle__img" src="#">
       </a>
       <div class="background-sedona">
         <img href="background-sedona__img" src="#" alt="">
@@ -48,20 +46,19 @@
         </div>  
         <form class="form-review" id="review" class="review" action="#">
           <fieldset class="form-review__fieldset">
-              <legend class="form-review__legend">Представьтесь, пожалуйста:</legend>
-            </div>
-            <div class="table-guest">
-              <div class="table-guest__input-wrapper">
-                <label class="table-guest__label" for="surname">Фамилия:<span class="highlighted">*</span></label>
-                <input class="table-guest__input" type="text" id="surname" name="surname" form="review" value="Иванов">
+            <legend class="form-review__legend">Представьтесь, пожалуйста:</legend>
+            <div class="form-wrapper">
+              <div class="form-wrapper__input-wrapper">
+                <label class="form-wrapper__label" for="surname">Фамилия:<span class="highlighted">*</span></label>
+                <input class="form-wrapper__input" type="text" id="surname" name="surname" form="review" placeholder="Иванов">
               </div>
-              <div class="table-guest__input-wrapper">
-                <label class="table-guest__label" for="first-name">Имя:<span class="highlighted">*</span></label>
-                <input class="table-guest__input" type="text" id="first-name" name="first-name" form="review" value="Петр">
+              <div class="form-wrapper__input-wrapper">
+                <label class="form-wrapper__label" for="first-name">Имя:<span class="highlighted">*</span></label>
+                <input class="form-wrapper__input" type="text" id="first-name" name="first-name" form="review" placeholder="Петр">
               </div>
-              <div class="table-guest__input-wrapper">
-                <label class="table-guest__label">Отчество:<span class="highlighted">*</span></label>
-                <input class="table-guest__input" type="text" id="middle-name" name="middle-name" form="review" value="Александрович">
+              <div class="form-wrapper__input-wrapper">
+                <label class="form-wrapper__label">Отчество:<span class="highlighted">*</span></label>
+                <input class="form-wrapper__input" type="text" id="middle-name" name="middle-name" form="review" placeholder="Александрович">
               </div>
             </div>
           </fieldset>
@@ -84,9 +81,7 @@
               <label class="duration-stay__label" for="number-days">Длительность пребывания:<span class="highlighted">*</span></label>
               <div class="duration-stay__count">
                 <div class="duration-stay__less"></div>
-                <div class="duration-stay__number-days">
-                  <input class="duration-stay__input" type="text" id="number-days" name="number-days" form="review" value="14">
-                </div>  
+                <input class="duration-stay__input" type="text" id="number-days" name="number-days" form="review" value="14">
                 <div class="duration-stay__more"></div>
               </div>
             </div>
@@ -101,50 +96,48 @@
               <label class="number-travelers__label" for="number-travelers">Длительность пребывания:<span class="highlighted">*</span></label>
               <div class="number-travelers__count">
                 <div class="number-travelers__less"></div>
-                <div class="number-travelers__number-days">
-                  <input class="number-travelers__input" type="text" id="number-travelers" name="number-travelers" form="review" value="2">
-                </div>  
+                <input class="number-travelers__input" type="text" id="number-travelers" name="number-travelers" form="review" value="2">
                 <div class="number-travelers__more"></div>
               </div>
             </div>
-            <div class="table-guests">
-              <div class="table-guests__row">
-                <div class="table-guests__col">№</div><div class="table-guests__col">Фамилия:<span class="highlighted">*</span></div>
+            <div class="form-wrapper">
+              <div class="form-wrapper__row">
+                <div class="form-wrapper__col">№</div><div class="form-wrapper__col">Фамилия:<span class="highlighted">*</span></div>
               </div>
-              <div class="table-guests__row">
-                <div class="table-guests__col">1</div><div class="table-guests__col"><input type="text" name="surname-traveler" form="review" value="Иванов"></div>
+              <div class="form-wrapper__row">
+                <div class="form-wrapper__col">1</div><div class="form-wrapper__col"><input type="text" name="surname-traveler" form="review" placeholder="Иванов"></div>
               </div>
-              <div class="table-guests__row">           
-                <div class="table-guests__col"></div><div class="table-guests__col">Имя:<span class="highlighted">*</span></div>
+              <div class="form-wrapper__row">           
+                <div class="form-wrapper__col"></div><div class="form-wrapper__col">Имя:<span class="highlighted">*</span></div>
               </div>
-              <div class="table-guests__row">
-                <div class="table-guests__col"></div><div class="table-guests__col"><input type="text" name="first-name-traveler" form="review" value="Петр"></div>
+              <div class="form-wrapper__row">
+                <div class="form-wrapper__col"></div><div class="form-wrapper__col"><input type="text" name="first-name-traveler" form="review" placeholder="Петр"></div>
               </div>
-              <div class="table-guests__row">
-                <div class="table-guests__col"></div><div class="table-guests__col">Отчество:<span class="highlighted">*</span></div>
+              <div class="form-wrapper__row">
+                <div class="form-wrapper__col"></div><div class="form-wrapper__col">Отчество:<span class="highlighted">*</span></div>
               </div>
-              <div class="table-guests__row">
-                <div class="table-guests__col"></div><div class="table-guests__col"><input type="text" name="middle-name-traveler" form="review" value="Александрович"></div>
+              <div class="form-wrapper__row">
+                <div class="form-wrapper__col"></div><div class="form-wrapper__col"><input type="text" name="middle-name-traveler" form="review" placeholder="Александрович"></div>
               </div>
             </div>
-            <div class="table-guests">
-              <div class="table-guests__row">
-                <div class="table-guests__col">№</div><div class="table-guests__col">Фамилия:<span class="highlighted">*</span></div>
+            <div class="form-wrapper">
+              <div class="form-wrapper__row">
+                <div class="form-wrapper__col">№</div><div class="form-wrapper__col">Фамилия:<span class="highlighted">*</span></div>
               </div>
-              <div class="table-guests__row">
-                <div class="table-guests__col">2</div><div class="table-guests__col"><input type="text" name="surname-traveler" form="review" value="Иванов"></div>
+              <div class="form-wrapper__row">
+                <div class="form-wrapper__col">2</div><div class="form-wrapper__col"><input type="text" name="surname-traveler" form="review" placeholder="Иванов"></div>
               </div>
-              <div class="table-guests__row">           
-                <div class="table-guests__col"></div><div class="table-guests__col">Имя:<span class="highlighted">*</span></div>
+              <div class="form-wrapper__row">           
+                <div class="form-wrappers__col"></div><div class="form-wrapper__col">Имя:<span class="highlighted">*</span></div>
               </div>
-              <div class="table-guests__row">
-                <div class="table-guests__col"></div><div class="table-guests__col"><input type="text" name="first-name-traveler" form="review" value="Петр"></div>
+              <div class="form-wrapper__row">
+                <div class="form-wrapper__col"></div><div class="form-wrapper__col"><input type="text" name="first-name-traveler" form="review" placeholder="Петр"></div>
               </div>
-              <div class="table-guests__row">
-                <div class="table-guests__col"></div><div class="table-guests__col">Отчество:<span class="highlighted">*</span></div>
+              <div class="form-wrapper__row">
+                <div class="form-wrapper__col"></div><div class="form-wrapper__col">Отчество:<span class="highlighted">*</span></div>
               </div>
-              <div class="table-guests__row">
-                <div class="table-guests__col"></div><div class="table-guests__col"><input type="text" name="middle-name-traveler" form="review" value="Александрович"></div>
+              <div class="form-wrapper__row">
+                <div class="form-wrapper__col"></div><div class="form-wrapper__col"><input type="text" name="middle-name-traveler" form="review" placeholder="Александрович"></div>
               </div>
             </div>
           </fieldset>
@@ -169,9 +162,7 @@
           </fieldset>
           <fieldset class="form-review__fieldset">
             <legend class="form-review__legend">Загрузите фотографии:</legend>
-            <div class="select-photos">
-              <input class="select-photos__button" type="file" value="Выбрать фотографии">
-            </div>
+            <input class="select-photos__button" type="file" value="Выбрать фотографии">
             <div class="download__photos">
               <div class="download__photo">
                 <img class="download__img" src="">
