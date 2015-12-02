@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Гостиницы</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body class="page-body">
+    <header class="page-header">
+      <nav class="navigation">
+        <a class="navigation__btn-close" href="#">
+          <img class="navigation__img-close" src="">
+        </a>
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Информация</a>
+          </li>
+          <li class="navigation__item  navigation__item--active">
+            <a class="navigation__link" href="#">Оставить отзыв</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Блог шерифа</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Гостиницы</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="logo">
+        <a href="#"><img src=""></a>
+      </div>
+      <a class="menu-toggle__link" href="#">
+        <img class="menu-toggle__img" src="#">
+      </a>
+      <div class="background-sedona">
+        <img href="background-sedona__img" src="#" alt="">
+      </div>
+    </header>
+    <main class="page-main">
+      <div class="page-main__center-wrapper">
+        <div class="text-block">
+          <h1 class="text-block__title">Оставьте свой отзыв</h1>
+          <p class="text-block__p">
+            Помогите нашим отелям стать лучше! Оставьте свой отзыв о них, а также о посещенных вами достопримечательностях
+          </p>
+        </div>  
+        <form class="form-review" id="review" class="review" action="#">
+          <fieldset class="form-review__fieldset">
+            <legend class="form-review__legend">Представьтесь, пожалуйста:</legend>
+            <div class="form-wrapper">
+              <div class="form-wrapper__input-wrapper">
+                <label class="form-wrapper__label" for="surname">Фамилия:<span class="highlighted">*</span></label>
+                <input class="form-wrapper__input" type="text" id="surname" name="surname" form="review" placeholder="Иванов">
+              </div>
+              <div class="form-wrapper__input-wrapper">
+                <label class="form-wrapper__label" for="first-name">Имя:<span class="highlighted">*</span></label>
+                <input class="form-wrapper__input" type="text" id="first-name" name="first-name" form="review" placeholder="Петр">
+              </div>
+              <div class="form-wrapper__input-wrapper">
+                <label class="form-wrapper__label">Отчество:<span class="highlighted">*</span></label>
+                <input class="form-wrapper__input" type="text" id="middle-name" name="middle-name" form="review" placeholder="Александрович">
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form-review__fieldset">
+            <legend class="form-review__legend">Ваше общее впечатление:</legend>
+            <div class="impression-radio">
+              <input class="impression__input" type="radio" name="impression" form="review" value="positive">Скорее положительное
+            </div>
+            <div class="impression-radio">
+              <input class="impression__input" type="radio" name="impression" form="review" value="negative">Скорее отрицательное
+            </div>
+          </fieldset>
+          <fieldset class="form-review__fieldset">
+            <legend class="form-review__legend">Даты вашей поездки:</legend>
+            <div class="arrival-date">
+              <label class="arrival-date__label" for="arrival-date"> Дата приезда:<span class="highlighted">*</span></label>
+              <input class="arrival-date__input" type="text" id="arrival-date" name="arrival-date" form="review" value="4 июля 2015">
+            </div>
+            <div class="duration-stay">
+              <label class="duration-stay__label" for="number-days">Длительность пребывания:<span class="highlighted">*</span></label>
+              <div class="duration-stay__count">
+                <div class="duration-stay__less"></div>
+                <input class="duration-stay__input" type="text" id="number-days" name="number-days" form="review" value="14">
+                <div class="duration-stay__more"></div>
+              </div>
+            </div>
+            <div class="departure-date">
+              <label class="departure-date__label" for="departure-date">Дата отъезда:<span class="highlighted">*</span></label>
+              <input class="departure-date__input" type="text" name="departure-date" form="review" value="28 июля 2015">
+            </div>
+          </fieldset>
+          <fieldset class="form-review__fieldset">
+            <legend class="form-review__legend">Кол-во путешественников:</legend>
+            <div class="number-travelers">
+              <label class="number-travelers__label" for="number-travelers">Длительность пребывания:<span class="highlighted">*</span></label>
+              <div class="number-travelers__count">
+                <div class="number-travelers__less"></div>
+                <input class="number-travelers__input" type="text" id="number-travelers" name="number-travelers" form="review" value="2">
+                <div class="number-travelers__more"></div>
+              </div>
+            </div>
+            <div class="form-wrapper">
+              <div class="form-wrapper__row">
+                <div class="form-wrapper__col">№</div><div class="form-wrapper__col">Фамилия:<span class="highlighted">*</span></div>
+              </div>
+              <div class="form-wrapper__row">
+                <div class="form-wrapper__col">1</div><div class="form-wrapper__col"><input type="text" name="surname-traveler" form="review" placeholder="Иванов"></div>
+              </div>
+              <div class="form-wrapper__row">           
+                <div class="form-wrapper__col"></div><div class="form-wrapper__col">Имя:<span class="highlighted">*</span></div>
+              </div>
+              <div class="form-wrapper__row">
+                <div class="form-wrapper__col"></div><div class="form-wrapper__col"><input type="text" name="first-name-traveler" form="review" placeholder="Петр"></div>
+              </div>
+              <div class="form-wrapper__row">
+                <div class="form-wrapper__col"></div><div class="form-wrapper__col">Отчество:<span class="highlighted">*</span></div>
+              </div>
+              <div class="form-wrapper__row">
+                <div class="form-wrapper__col"></div><div class="form-wrapper__col"><input type="text" name="middle-name-traveler" form="review" placeholder="Александрович"></div>
+              </div>
+            </div>
+            <div class="form-wrapper">
+              <div class="form-wrapper__row">
+                <div class="form-wrapper__col">№</div><div class="form-wrapper__col">Фамилия:<span class="highlighted">*</span></div>
+              </div>
+              <div class="form-wrapper__row">
+                <div class="form-wrapper__col">2</div><div class="form-wrapper__col"><input type="text" name="surname-traveler" form="review" placeholder="Иванов"></div>
+              </div>
+              <div class="form-wrapper__row">           
+                <div class="form-wrappers__col"></div><div class="form-wrapper__col">Имя:<span class="highlighted">*</span></div>
+              </div>
+              <div class="form-wrapper__row">
+                <div class="form-wrapper__col"></div><div class="form-wrapper__col"><input type="text" name="first-name-traveler" form="review" placeholder="Петр"></div>
+              </div>
+              <div class="form-wrapper__row">
+                <div class="form-wrapper__col"></div><div class="form-wrapper__col">Отчество:<span class="highlighted">*</span></div>
+              </div>
+              <div class="form-wrapper__row">
+                <div class="form-wrapper__col"></div><div class="form-wrapper__col"><input type="text" name="middle-name-traveler" form="review" placeholder="Александрович"></div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form-review__fieldset">
+            <legend class="form-review__legend">Посещенные достопримечательности:</legend>
+            <div class="attraction">
+              <input class="attraction__input" type="checkbox" id="attraction-bridge" name="attraction-bridge" form="review" value="bridge" checked>
+              <label class="attraction__label" for="attraction-bridge">Мост Дъявола</label>
+            </div>
+            <div class="attraction">
+              <input class="attraction__input" type="checkbox" id="attraction-park" name="attraction-park" form="review" value="park">
+              <label class="attraction__label" for="attraction-park">Слайд-парк</label>
+            </div>
+            <div class="attraction">
+              <input class="attraction__input" type="checkbox" id="attraction-mountain" name="attraction-mountain" form="review" value="mountain" checked>
+              <label class="attraction__label" for="attraction-mountain">Гора-Колокол</label>
+            </div>
+            <div class="attraction">
+              <input class="attraction__input" type="checkbox" id="attraction-rocks" name="attraction-rocks" form="review" value="rocks" checked>
+              <label class="attraction__label" for="attraction-rocks">Красные скалы</label>
+            </div>
+          </fieldset>
+          <fieldset class="form-review__fieldset">
+            <legend class="form-review__legend">Загрузите фотографии:</legend>
+            <input class="select-photos__button" type="file" value="Выбрать фотографии">
+            <div class="download__photos">
+              <div class="download__photo">
+                <img class="download__img" src="">
+              </div>
+              <div class="download__photo">
+                <img class="download__img" src="">
+              </div>
+              <div class="download__photo">
+                <img class="download__img" src="">
+              </div>
+              <div class="download__photo">
+                <img class="download__img" src="">
+              </div>
+              <div class="download__photo">
+                <img class="download__img" src="">
+              </div>
+              <div class="download__photo">
+                <img class="download__img" src="">
+              </div>
+              <div class="download__photo">
+                <img class="download__img" src="">
+              </div>
+            </div>
+            <button class="form-review__submit" type="submit" value="Отправить отзыв">
+          </fieldset>
+        </form>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="hashtag">#visitsedona</div>
+      <div class="social-links">
+        <a href="#" class="social-link social-link__tw">
+          <i class="social-link__icon-twitter"></i>
+        </a>
+        <a href="#" class="social-link__link social-link__fb">
+          <i class="social-link__icon-facebook"></i>
+        </a>
+        <a href="#" class="social-link__link social-link__youtube">
+          <i class="social-link__icon-youtube"></i>
+        </a>
+      </div>
+    </footer> 
+  </body>
+</html>
