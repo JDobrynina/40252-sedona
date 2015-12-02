@@ -1,0 +1,9 @@
+body {
+  font-family: $font-stack;
+  font-size: $font-size;
+  text-transform: uppercase;
+}
+.center-wrapper {
+  width: $width-mobile;
+  margin: 0 auto;
+}
