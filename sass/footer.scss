@@ -1,0 +1,30 @@
+.page-footer {
+  padding: 32px 0 25px;
+  text-align: center;
+
+  &__copyright-link{
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.hashtag {
+  @include title;
+  margin-bottom: 35px;
+}
+
+.social-link {
+  margin-bottom: 40px;;
+
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+    width: 46px;
+    height: 47px;
+    margin-right: 6px;
+    background: $bg-blue;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
