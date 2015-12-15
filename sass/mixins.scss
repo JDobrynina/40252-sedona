@@ -1,0 +1,85 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin title {
+  font: {
+    size: $font-size-bigger;
+    weight: 700;
+  }
+  line-height: $line-height;
+  margin: 0;
+  color: #000;
+}
+
+@mixin big-text {
+  font: {
+    size: $font-size-big;
+    weight: 700;
+  }
+  line-height: $line-height;
+  color: #000;
+}
+
+@mixin text {
+  font-size: $font-size;
+  line-height: 21px;
+}
+
+@mixin btn{
+  display: block;
+  padding: 16px 0;
+  @include title;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+@mixin btn--blue{
+  color: #fff;
+  background: $bg-blue;
+}
+
+@mixin label {
+  font-size: $font-size;
+  line-height: $line-height;
+  margin: 0;
+}
+
+@mixin input {
+  font: {
+    size: $font-size-big;
+    weight: 700;
+  }
+  line-height: 26px;
+  color: #000;
+  text-transform: none;
+  border: none;
+  padding: 16px 20px;
+  background: #f2f2f2;
+  box-sizing: border-box;
+}
+
+@mixin marker{
+  display: inline-block;
+  vertical-align: middle;
+  width: 61px;
+  height: 58px;
+  padding: 0;
+  border: none;
+  background: #f2f2f2;
+}
+
+@mixin input-number{
+  display: inline-block;
+  vertical-align: middle;
+  @include input;
+  text-transform: none;
+  width: 145px;
+  margin-bottom: 0;
+  box-sizing: border-box;
+}
