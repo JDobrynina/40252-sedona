@@ -1,9 +1,11 @@
 body {
+  min-width: $width-mobile;
   font-family: $font-stack;
   font-size: $font-size;
+  color: $font-color;
   text-transform: uppercase;
 }
 .center-wrapper {
-  width: $width-mobile;
+  max-width: $width-desktop;
   margin: 0 auto;
 }

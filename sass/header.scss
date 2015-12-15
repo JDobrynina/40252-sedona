@@ -1,106 +1,204 @@
 .page-header {
-  position: relative;
   margin-bottom: 56px;
 }
 
 .logo {
-  position: absolute;
-  display: block;
-  width: 138px;
-  height: 70px;
-  left: calc(50% - 69px);
+  position: relative;
+
+  a{
+    position: absolute;
+    top: 0;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    z-index: 1;
+    text-align: center;
+  }
+
+  @media(min-width: $width-laptop) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+  }
+
+  &__img{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
 }
 
 .navigation{
+  font-size: 0;
   position: relative;
-  padding-bottom: 56px;
+
+  @media (max-width: $width-laptop - 1){
+    margin-bottom: 56px;
+  }
 
   &__list {
     list-style: none;
     padding: 0;
     margin: 0;
   }
+
   &__item{
-    display: inline-block;
-    vertical-align: middle;
     background: $bg-blue;
-    width: $width-mobile;
     padding: 7px 0;
     border-top: 1px solid #678fa8;
     border-bottom: 1px solid #9ac2db;
     text-align: center;
-  }  
+    @media (min-width: $width-laptop) {
+      display: inline-block;
+      vertical-align: middle;
+      width: 20%;
+      padding: 14px 0;
+      background: none;
+      border: none;
+      }
+  }
+
+  &__item:nth-of-type(2){
+    @media (min-width: $width-laptop) {
+    margin-right: 20%;
+    }
+  }
+
   &__item:first-of-type {
     border-top: none;
-  }  
+  }
+
   &__item:last-of-type {
     border-bottom: none;
-    box-shadow: (inset 0px -7px 10px -7px rgba(0,0,0,.35));
-  }
-  &__item--active:after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 23px;
-    height: 22px;
-    right: 20px;
-    top: 17px;
-    background: url("../img/icon-close.png");
+    box-shadow: inset 0px -7px 10px -7px rgba(0,0,0,.35);
+    @media (min-width: $width-laptop) {
+      box-shadow: none;
+    }
   }
   &__link {
+    display: block;
     line-height: 40px;
     font-size: 18px;
     font-weight: bold;
     color: #fff;
     text-decoration: none;
+    @media (min-width: $width-laptop) {
+      display: inline;
+      color: #000;
+      font-size: 14px;
+      line-height: 26px;
+    }
   }
-  &::after {
-    content: '';
-    width: 23px;
-    height: 22px;
+  
+  &__close {
     position: absolute;
-    right: 20px;
-    bottom: 17px;
-    background-image: url("../img/toogle.png");
+    top: 17px;
+    right: 17px;
+    width: 25px;
+    height: 25px;
+    font-size: 0;
+    border: none;
+    background-color: transparent;
+    @media (min-width: $width-laptop) {
+      display: none;
+    }
+
+    &:hover, &:focus {
+      outline: none;
+    }
+  }
+
+  &__toggle {
+    float: right;
+    width: 25px;
+    height: 25px;
+    margin-top: 17px;
+    margin-right: 20px; 
+    font-size: 0;
+    border: none;
+    background-color: #fff;
+
+    @media (min-width: $width-laptop) {
+      display: none;
+    }
+
   }
 }
 
 .intro {
-  background: #e0eef7 url("../img/bg-intro.png") no-repeat top center;
-  padding-top: 47px;
-  padding-bottom: 48px;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  text-align: center;
+  background: url('../img/photo-background@1x.jpg') no-repeat;
+  background-size: cover;
+  background-position: center top;
   position: relative;
-  z-index: -1;
+  overflow: hidden;
 
-  &__block {
-    text-align: center;
-    margin: 0 auto;
+  @media (min-width: $width-laptop) {
+    padding-top: 75px;
+    padding-bottom: 80px;
   }
-  &__block--welcome{
-    width: 196px;
-    margin-bottom: 60px;
-  }
-  &__block--sedona {
-    width: 280px;
-    margin-bottom: 67px;
-  }
-  &__block--grandcanyon{
-    width: 197px;
-  }
-  &__image {
-    display: inline-block;
-    vertical-align: top;
-  }
-  &::after {
-    content: "";
+
+  &__block{
     display: block;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 57px;
-    background: url("../img/bottom-line.png") no-repeat center bottom;
+    margin: 0 auto;
+
+    &--welcome {
+      fill: #81b3d2;
+      margin-bottom: 8px;
+    }
+
+    &--tothegorgerous {
+      fill: #766357;
+      margin-bottom: 60px;
+    }
+
+    &--sedona {
+      width: 55%;
+      @media (min-width: $width-laptop) {
+        width: 60%;
+      }
+      @media (min-width: $width-desktop) {
+        width: 38%;
+      }
+      fill: #fff;
+      margin-bottom: 70px;
+    }
+
+    &--grandcanyon {
+      fill: #fff;
+    }
+    &--bg-small-sedona{
+      padding-top: 100px;
+      padding-bottom: 120px;
+    }
   }
-  &--bg-small-sedona{
-    background: #e0eef7 url("../img/bg-intro-form.png") no-repeat top center;
+  &__mask {
+    position: absolute;
+    bottom: -1px;
+    left: -50%;
+    width: 200%;
+
+    @media (min-width: $width-laptop) {
+      left: 0;
+      width: 100%;
+    }
   }
 }
+
+

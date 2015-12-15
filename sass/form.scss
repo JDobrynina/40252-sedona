@@ -1,12 +1,68 @@
 
+/*Сетка из 12 колонок*/
+@for $i from 1 through 12 {
+  .grid-#{$i}_320{
+    @include grid;
+    width: 1 / 12 * $i * 100%;
+  }
+}
+
+@media (min-width: 768px){
+  @for $i from 1 through 12 {
+    .grid-#{$i}_768{
+      @include grid;
+      width: 1 / 12 * $i * 99%;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  @for $i from 1 through 12 {
+    .grid-#{$i}_1200{
+      @include grid;
+      width: 1 / 12 * $i * 99%;
+    }
+  }
+}
+
+input:focus {
+  outline: 2px solid #b8b8b8;
+}
+
+
+/*Основная форма*/
 .form-review{
+  margin:0;
+  padding:0;
+
+  margin-left: 6.3%;
+  margin-right: 6.3%;
+
+  @media (min-width: $width-laptop){
+    margin-left: 7.87%;
+    margin-right: 7.87%;
+  }
+
+  @media (min-width: $width-desktop){
+    margin-left: 10.19%;
+    margin-right: 10%;
+  }
+
 
   &__fieldset{
+    margin:0;
+    padding:0;
+
     border-left:none;
     border-right:none;
-    border-top:none;  
+    border-top:none;
     border-bottom: 1px solid #e5e5e5;
+
     margin-bottom: 20px;
+
+   @media (min-width: $width-laptop){
+    border-bottom: none;
+   }
   }
 
   &__fieldset:last-of-type{
@@ -17,6 +73,32 @@
     @include big-text;
     text-align: center;
     margin-bottom: 10px;
+    
+    @media (min-width: $width-laptop){
+      font-size: $font-size-bigger;
+      position: relative;
+      width: 100%;
+
+      &:before {
+        content: '';
+        width: 17.5%;
+        height: 1px;
+        background-color: $grey;
+        position: absolute;
+        left: 0;
+        top: 40%;
+      }
+
+      &:after {
+        content: '';
+        width: 17.5%;
+        height: 1px;
+        background-color: $grey;
+        position: absolute;
+        right: 0;
+        top: 40%;
+        }
+     }
   }
 
   &__submit{
@@ -36,53 +118,97 @@
     background: $bg-blue;
     text-transform: uppercase;
   }
+
+  &__required-field:after{
+    content: '*';
+    width: 1px;
+    height: 1px;
+    color: #ff2222;
+    position: absolute;
+  }
 }
+
+/*Информация о путешественнике*/
 
 .form-user {
   padding: 20px 18px 6px;
   border: none;
   margin: 0;
+  @media (min-width: $width-laptop) {
+    padding: 25px 0 30px;
+    border-bottom: none;
+  }
 
   &__title {
     @include title;
     margin: 17px 0 7px;
+    @media (min-width: $width-laptop) {
+      font-size: $font-size-bigger;
+    }
   }
 
   &__label {
     display: block;
     @include label;
-    margin-bottom: 7px;
+    position: relative;
+    padding: 0 21px;
+    padding-top: 20px;
+    padding-bottom: 10px;
   }
 
   &__input {
     display: block;
     @include input;
-    width: 280px;
+    width: 100%;
     text-transform: none;
     margin-bottom: 15px;
   }
-}
-.text-block{
 
+  &__input-wrapper{
+    display:inline-block;
+    width: 100%;
+    margin-right: 0;
+    @media (min-width: $width-laptop) {
+      width: 27%;
+      margin-right: 8.45%;
+    }
+  }
+
+  &__input-wrapper:last-child{
+    margin-right: 0;
+  }
+}
+
+.text-block{
   &__title{
     @include big-text;
     text-align: center;
   }
 }
-.highlighted{
-  color: #ff2222;
-}
 
 .impression{
   margin-bottom: 23px;
+
+  @media (min-width: $width-desktop){
+    text-align: center;
+  }
 }
 
 .impression-radio{
   padding-top: 13px;
-  padding-right: 18px;
-  padding-left: 18px;
-  margin: 0;
-  width: 280px; //временно
+  padding-left: 20px;
+  
+  @media (min-width: $width-laptop){
+    width: 40.6%;
+    margin-right: 12%;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: $width-desktop){
+    margin-right: 0;
+  }
 
   &__input {
     opacity: 0;
@@ -113,74 +239,186 @@
   }
 }
 
+/*Форма с датами поездки*/
+
 .travels-dates{
-  padding: 20px 18px 6px;
+
+  &__label--days {
+  display: none;
+  @media (min-width: $width-laptop) and (max-width: $width-desktop - 1) {
+    display: inline;
+    }
+  }
+
+  &__label--durations {
+  @media (min-width: $width-laptop) and (max-width: $width-desktop - 1)  {
+    display: none;
+    }
+  }
 
   &__label {
     display: block;
     @include label;
     margin-bottom: 7px;
+    margin-left: 21px;
   }
 
   &__input {
     display: block;
     @include input;
-    width: 280px;
     margin-bottom: 15px;
+    width: 100%;
   }
+
+  &__item{
+    display:inline-block;
+    width: 100%;
+    margin-right: 0;
+    @media (min-width: $width-laptop) {
+      width: 27%;
+      margin-right: 8.45%;
+    }
+  }
+
+  &__item:last-child{
+    margin-right: 0;
+  }
+
 }
 
 .counter{
-  padding-top: 20px;
-  padding-bottom: 6px;
-  padding-left: 18px;
+  @media (min-width: $width-laptop){
+    margin: 0 auto;
+  }
 
-  &__label{
+  &__label {
     display: block;
+    @include label;
     margin-bottom: 7px;
+    margin-left: 21px;
   }
 
-  &__number &__input {
-    @include input-number;
+  &__input {
+    display: block;
+    @include input;
+    margin-bottom: 15px;
+    width: 100%;
   }
 
-  &__number &__marker {
-    @include marker;
+  &__marker{
+    display: inline-block;
+    position: relative;
+    height: 66px;
+    color: #b8b8b8;
+    font-size: 14px;
+    border: none;
+    background-color: #f2f2f2;
+    @media (min-width: $width-laptop) and (max-width: $width-desktop - 1){
+      margin-left: -5px;
+    }
   }
 
-  &__number &__marker:last-child{
-    margin-right: 0;
+  &__marker-unit{
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    @media (min-width: $width-laptop) and (max-width: $width-desktop - 1){
+      display: none;
+    }
+  }
+
+  &__number{
+    width: calc(100% - 130px);
+  }
+
+  &__less{
+    width: 60px;
+    fill: #b8b8b8;
+    vertical-align: middle;
+  }
+
+  &__more{
+    width: 60px;
+    fill: #b8b8b8;
+    vertical-align: middle;
+  }
+
+}
+
+.number-travelers{
+  @media (min-width: $width-laptop){
+    width: 29%;
+  }
+  @media (max-width: $width-desktop - 1){
+    margin: 0 auto;
+    text-align: center;
   }
 }
 
+/*количество путешественников*/
 .form-wrapper{
-  display: table;
-  width: 280px;
-  padding-left: 20px;
-  padding-right: 20px;
 
-  &__row{
-    display: table-row;
+  &__item{
+    @media (min-width: $width-laptop){
+     display: inline-block;
+     width: 32.6%;     
+     margin-right: 0.4%;
+     
+     &:last-child{
+      margin-right: 0;
+    }
+   }
+
+   @media (min-width: $width-desktop){
+    &:first-child{
+        width: 22%;
+    }
+    margin-right: 4%;   
+   }
+    
   }
 
-  &__col{
-    display: table-cell;
-  }
-
-  &__col--left{
-    width: 21%;
-    padding-right: 4px;
-  }
-
-  &__col--number{
+  &__number{
     font-size: 18px;
     font-weight: 700;
     line-height: 26px;
     background: #f2f2f2;
-    width: 61px;
+    width: 96%;
     padding-top: 16px;
     padding-bottom: 16px;
     text-align: center;
+  }
+
+
+
+  &--mobile-left {
+    @media (max-width: $width-laptop - 1){
+      float: left;
+      width: 22%;
+      margin-bottom: 168px;
+    }
+    @media (min-width: $width-laptop){
+      display: inline-block;
+      width: 10%;
+    }
+    @media (min-width: $width-desktop){
+      width: 7%;
+    }    
+ }
+ &--mobile-left  &__item{
+   width: 100%;
+   margin-right: 5.65%;
+ }
+
+  &--mobile-right {
+    @media (max-width: $width-laptop - 1){
+      float: right;
+      width: 76%;
+    }
+    @media (min-width: $width-laptop){
+      display: inline-block;
+      width: 89%;
+    }
   }
 
   &__label{
@@ -189,12 +427,25 @@
 
   &__input{
     @include input;
-    width: 209px;
-    margin-bottom: 23px;
+    width: 100%;
   }
 }
 
+/*посещенные достопримечательности*/
 .attraction{
+
+  @media (min-width: $width-laptop) and (max-width: $width-desktop - 1){
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__item{
+    display: inline-block;
+     @media (max-width: $width-laptop - 1){
+        width: 100%;
+     }    
+  }
 
   &__input{
     opacity: 0;
@@ -227,51 +478,103 @@
 .select-photos{
 
   &__label{
-    cursor: pointer; 
+    cursor: pointer;
     @include btn;
     color: #c6c6c6;
     background-color: #f2f2f2;
+    width: 100%;
+
+     @media (min-width: $width-laptop) and (max-width: $width-desktop - 1){
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+     }
+
+    &--choose{
+      display: inline;
+       @media (min-width: $width-desktop){
+        display: none;
+       }
+    }
+    &--drag{
+      display: none;
+      @media (min-width: $width-desktop){
+        display: inline;
+      }
+    }
   }
-             
   &__button{
-    opacity: 0;     
+    opacity: 0;
   }
 }
 
 .download{
-  
-  &__photos{
-    padding-top: 20px;
-    padding-bottom: 6px;
-  }
 
   &__photo{
-    position: relative;
     display: inline-block;
-    font-size: $font-size;
+    position: relative;
+    width: 19.9%;
     margin-top: 0px;
-    margin-right: 35px;
-    margin-bottom: 25px;
+    margin-right: 12.5%;
+    margin-bottom: 12.5%;
     margin-left: 0px;
+
+   @media (min-width: $width-laptop){
+      width: 22.2%;
+      margin-right: 10.1%;
+      margin-bottom: 10.1%;
+   }
+
+    @media (min-width: $width-desktop){
+      width: 22.2%;
+      margin-right: 10.1%;
+      margin-bottom: 10.1%;
+   }
+    
+   @media (min-width: $width-desktop){
+      width: 14.6%;
+      margin-right: 5%;
+      margin-bottom: 5%;
+  }
+    font-size: $font-size;
+
+    &--hidden{
+      @media (min-width: $width-laptop){
+        display: none;
+      }
+    }
   }
 
-  &__photo:nth-of-type(3n){
-    margin-right: 0;
-  }
-
-  &__btn{
+   &__btn{
     position: absolute;
     top: -15px;
-    left: calc(50% - 15px);
+    left: calc(50% - 24%);
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 48%;
+    height: 48%;
     border-radius: 50%;
     color: #f2f2f2;
     border: none;
+
+    @media (min-width: $width-laptop){
+      width: 50%;
+      height: 50%;
+      left: 75%;
+   }
+
+    @media (min-width: $width-laptop){
+      width: 30%;
+      height: 30%;
+      left: 85%;
+   }
+    
+    @media (min-width: $width-laptop) and (max-width: $width-desktop - 1){
+      z-index: -2;
+    }
+
   }
   &__btn--close{
-    background: #f2f2f2 url("../img/btn-close.png") no-repeat scroll 50% 50%;
+    background: #f2f2f2 url("../img/icon-close.png") no-repeat scroll 50% 50%;
     background-size: 12px 12px;
   }
 }

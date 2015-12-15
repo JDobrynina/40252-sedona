@@ -6,6 +6,21 @@
     display: inline-block;
     vertical-align: middle;
   }
+
+  &__block{
+    display: inline-block;
+     @media (max-width: $width-laptop - 1){
+      width: 100%;
+     }
+     @media (min-width: $width-laptop){
+      margin-right: 10%;
+
+      &__block:last-child{
+        margin-right: 0;
+      }
+      
+    }
+  }
 }
 
 .hashtag {

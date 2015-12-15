@@ -4,6 +4,7 @@
     <title>Гостиницы</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
@@ -11,6 +12,15 @@
     <div class="center-wrapper">
       <header class="page-header">
         <nav class="navigation">
+          <button class="navigation__close">
+            <svg fill="#fff" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
+              <polygon
+              points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199
+              22.199,19.396 13.903,11.1 "
+              />
+            </svg>
+            Закрыть
+          </button>
           <ul class="navigation__list">
             <li class="navigation__item  navigation__item--active"><a class="navigation__link" href="#">Информация</a></li>
             <li class="navigation__item"><a class="navigation__link" href="#">Оставить отзыв</a></li>
@@ -19,12 +29,68 @@
             </li>
           </ul>
           <div class="logo">
-            <a href="#"><img src="img/logo.png" width="138" height="70" alt="Седона"></a>
+            <a href="index.html">
+              <svg class="logo__background" width="137px" height="70.778px" viewBox="0 0 137 70.778" xml:space="preserve">
+                <path fill="#81b3d2" d="M137,0h-14.173H14.173H0l31.279,35.161l0,0l27.8,31.249c5.182,5.824,13.66,5.824,18.842,0l27.8-31.249l0,0L137,0z"/>
+              </svg>
+              <picture class="logo__img">
+                <source srcset="img/logo-sedona@1x.png 1x">
+                <source srcset="img/logo-sedona@2x.png 2x">
+                <source srcset="img/logo-sedona@3x.png 3x">
+                <img src="img/logo-sedona@1x.png" height="56" width="67" alt="Логотип">
+              </picture>
+            </a>
           </div>
+          <button class="navigation__toggle" type="button">
+            <svg fill="#81b3d2" width="22.928px" height="21.982px" viewBox="0 0 22.928 21.982">
+              <g>
+                <rect width="22.928" height="3.964"/>
+                <rect y="9.009" width="22.928" height="3.964"/>
+                <rect y="18.018" width="22.928" height="3.964"/>
+              </g>
+            </svg>
+            Меню
+          </button>
         </nav>
         <div class="intro intro--bg-small-sedona">
-          <div class="intro__block intro__block--sedona"><img class="intro__image" src="img/sedona-small-title.png" alt="Sedona" width="174" height="30"></div>
+          <svg class="intro__block intro__block--sedona" width="459.755px" height="79.804px" viewBox="0 0 459.755 79.804" xml:space="preserve">
+            <g>
+              <path
+              d="M44.468,21.737c-3.573-2.978-8.139-4.963-12.903-4.963c-3.573,0-8.338,2.084-8.338,6.253c0,4.368,5.261,6.055,8.636,7.146
+              l4.963,1.489c10.422,3.077,18.462,8.337,18.462,20.447c0,7.445-1.787,15.088-7.742,20.15c-5.856,4.963-13.698,7.047-21.241,7.047
+              c-9.43,0-18.661-3.176-26.304-8.537l8.338-15.682c4.864,4.268,10.621,7.742,17.271,7.742c4.566,0,9.43-2.283,9.43-7.544
+              c0-5.46-7.643-7.345-11.812-8.536c-12.208-3.475-20.249-6.65-20.249-21.143c0-15.187,10.819-25.112,25.807-25.112
+              c7.543,0,16.775,2.382,23.425,6.154L44.468,21.737z"
+              />
+              <path
+              d="M91.833,18.958v12.506h21.936v16.478H91.833v12.902h23.127v16.478H72.378V2.481h42.582v16.477H91.833z"
+              />
+              <path
+              d="M129.418,2.481h27.594c20.844,0,38.016,16.377,38.016,37.42c0,21.042-17.271,37.42-38.016,37.42h-27.594V2.481z
+              M148.873,60.845h4.367c11.613,0,21.54-6.352,21.54-20.943c0-13.4-8.834-20.943-21.341-20.943h-4.566V60.845z"
+              />
+              <path
+              d="M286.873,38.512c0,24.219-17.37,41.292-41.391,41.292s-41.391-17.072-41.391-41.292C204.091,15.881,223.943,0,245.482,0
+              S286.873,15.881,286.873,38.512z M224.34,38.611c0,12.903,9.529,22.333,21.142,22.333s21.142-9.43,21.142-22.333
+              c0-10.323-9.528-19.752-21.142-19.752S224.34,28.289,224.34,38.611z"
+              />
+              <path
+              d="M297.239,2.481h19.455l35.634,45.758h0.198V2.481h19.454v74.841h-19.454l-35.634-45.857h-0.198v45.857h-19.455V2.481z"
+              />
+              <path
+              d="M407.347,64.319l-5.161,13.003h-20.646l28.785-74.841h21.241l28.189,74.841H439.01l-4.863-13.003H407.347z M420.945,25.608
+              h-0.199l-8.039,23.822h16.179L420.945,25.608z"
+              />
+          </g>
+         </svg>
+        <svg class="intro__mask" width="1202px" viewBox="0 0 1202 57">
+          <g>
+            <polygon fill="#FFFFFF" points="250,23.71 0,0 0,57 250,57 601,57 250,0  "/>
+            <polygon fill="#FFFFFF" points="952,23.71 952,0 601,57 952,57 1202,57 1202,0  "/>
+          </g>
+        </svg>
         </div>
+
       </header>
       <main class="page-main">
         <div class="promo">
@@ -38,11 +104,11 @@
             <legend class="form-review__legend">Представьтесь, пожалуйста:</legend>
             <div class="form-user">
               <div class="form-user__input-wrapper">
-                <label class="form-user__label" for="surname">Фамилия:<span class="highlighted">*</span></label>
+                <label class="form-user__label form-review__required-field" for="surname">Фамилия:</label>
                 <input class="form-user__input" type="text" id="surname" name="surname" form="review" placeholder="Иванов">
               </div>
               <div class="form-user__input-wrapper">
-                <label class="form-user__label" for="first-name">Имя:<span class="highlighted">*</span></label>
+                <label class="form-user__label form-review__required-field" for="first-name">Имя:</label>
                 <input class="form-user__input" type="text" id="first-name" name="first-name" form="review" placeholder="Петр">
               </div>
               <div class="form-user__input-wrapper">
@@ -54,11 +120,11 @@
           <fieldset class="form-review__fieldset">
             <legend class="form-review__legend">Ваше общее впечатление:</legend>
             <div class="impression">
-              <div class="impression-radio">
+              <div class="impression-radio grid-12_320">
                 <input class="impression-radio__input" id="impression-positive" type="radio" name="impression" form="review" value="positive" checked>
                 <label class="impression-radio__label" for="impression-positive">Скорее положительное</label>
               </div>
-              <div class="impression-radio">
+              <div class="impression-radio grid-12_320">
                 <input class="impression-radio__input" id="impression-negative" type="radio" name="impression" form="review" value="negative">
                 <label class="impression-radio__label" for="impression-negative">Скорее отрицательное</label>
               </div>
@@ -66,128 +132,135 @@
           </fieldset>
           <fieldset class="form-review__fieldset">
             <legend class="form-review__legend">Даты вашей поездки:</legend>
-            <div class="travels-dates travels-dates-arrival">
-              <label class="travels-dates__label" for="arrival-date"> Дата приезда:<span class="highlighted">*</span></label>
-              <input class="travels-dates__input" type="text" id="arrival-date" name="arrival-date" form="review" value="4 июля 2015">
-            </div>
-            <div class="counter duration-stay">
-              <label class="counter__label" for="number-days">Длительность пребывания:<span class="highlighted">*</span></label>
-              <div class="counter__number">
-                <div class="counter__marker counter__less"></div>
-                <input class="counter__input" type="text" id="number-days" name="number-days" form="review" value="14">
-                <div class="counter__marker counter__more"></div>
+            <div class="travels-dates">
+
+              <div class="travels-dates__item travels-dates--arrival">
+                <label class="travels-dates__label form-review__required-field" for="arrival-date"> Дата приезда:</label>
+                <input class="travels-dates__input" type="text" id="arrival-date" name="arrival-date" form="review" value="4 июля 2015">
               </div>
-            </div>
-            <div class="travels-dates travels-dates-departure">
-              <label class="travels-dates__label" for="departure-date">Дата отъезда:<span class="highlighted">*</span></label>
-              <input class="travels-dates__input" type="text" name="departure-date" form="review" value="28 июля 2015">
-            </div>
+
+              <div class="travels-dates__item travels-dates--duration-stay">
+                <label class="travels-dates__label  form-review__required-field" for="number-days">
+                  <span class="travels-dates__label--durations">Длительность</span>
+                  <span class="travels-dates__label--days">Дней</span> пребывания:
+                </label>
+                <div class="counter">
+                  <button class="counter__marker counter__less">
+                    <svg width="20px" height="4px" viewBox="0 0 9.917 1.917" preserveAspectRatio="none">
+                      <rect width="9.917" height="1.917"/>
+                    </svg>
+                  </button>
+                  <div class="counter__marker counter__number">
+                    <input class="counter__input" type="text" id="number-days" name="number-days" form="review" value="14">
+                    <span class="counter__marker-unit">дн.</span>
+                  </div>           
+                  <button class="counter__marker counter__more">
+                    <svg width="20px" height="20px" viewBox="0 0 9.917 9.917">
+                      <polygon points="9.917,4 5.917,4 5.917,0 4,0 4,4 0,4 0,5.917 4,5.917 4,9.917 5.917,9.917 5.917,5.917 9.917,5.917 "/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="travels-dates__item travels-dates--departure">
+                <label class="travels-dates__label  form-review__required-field" for="departure-date">Дата отъезда:</label>
+                <input class="travels-dates__input" type="text" name="departure-date" form="review" value="28 июля 2015">
+              </div>
+
+            </div>            
           </fieldset>
           <fieldset class="form-review__fieldset">
             <legend class="form-review__legend">Кол-во путешественников:</legend>
-            <div class="counter number-travelers">
-              <label class="counter__label" for="number-travelers">Количество путешественников:<span class="highlighted">*</span></label>
-              <div class="counter__number">
-                <div class="counter__marker counter__less"></div>
-                <input class="counter__input" type="text" id="number-travelers" name="number-travelers" form="review" value="2">
-                <div class="counter__marker counter__more"></div>
+
+            <div class="number-travelers">
+              <label class="number-travelers__label form-review__required-field" for="number-travelers">Количество путешественников:</label>
+
+              <div class="counter">
+
+                <button class="counter__marker counter__less">
+                  <svg width="20px" height="4px" viewBox="0 0 9.917 1.917" preserveAspectRatio="none">
+                    <rect width="9.917" height="1.917"/>
+                  </svg>
+                </button>
+
+                <div class="counter__marker counter__number">
+                  <input class="counter__input" type="text" id="number-travelers" name="number-travelers" form="review" value="2">
+                  <span class="counter__marker-unit">чел.</span>
+                </div>
+         
+                <button class="counter__marker counter__more">
+                  <svg width="20px" height="20px" viewBox="0 0 9.917 9.917">
+                    <polygon points="9.917,4 5.917,4 5.917,0 4,0 4,4 0,4 0,5.917 4,5.917 4,9.917 5.917,9.917 5.917,5.917 9.917,5.917 "/>
+                  </svg>
+                </button>
+                    
               </div>
+
             </div>
+
             <div class="form-wrapper">
               <div class="form-wrapper__row">
-                <div class="form-wrapper__col">№</div>
-                <div class="form-wrapper__col">
-                  <label class="form-wrapper__label" for="surname-traveler">Фамилия:<span class="highlighted">*</span></label>
+                <div class="form-wrapper--mobile-left">
+                  <div class="form-wrapper__item">
+                    <div class="form-wrapper__label">№</div>
+                    <div class="form-wrapper__number">1</div> 
+                  </div>                               
+                </div>
+                <div class="form-wrapper--mobile-right">
+                  <div class="form-wrapper__item ">
+                    <label class="form-wrapper__label" for="surname-traveler">Фамилия:</label>
+                    <input class="form-wrapper__input" type="text" id="surname-traveler" name="surname-traveler" form="review" placeholder="Иванов">
+                  </div>
+                  <div class="form-wrapper__item">
+                    <label class="form-wrapper__label" for="first-name-traveler">Имя:</label>
+                    <input class="form-wrapper__input" type="text" id="first-name-traveler" name="first-name-traveler" form="review" placeholder="Петр"> 
+                  </div>
+                  <div class="form-wrapper__item">
+                    <label class="form-wrapper__label" for="middle-name-traveler">Отчество:</label>
+                    <input class="form-wrapper__input" type="text" id="middle-name-traveler" name="middle-name-traveler" form="review" placeholder="Александрович">
+                  </div>
                 </div>
               </div>
               <div class="form-wrapper__row">
-                <div class="form-wrapper__col form-wrapper__col--left">
-                  <div class="form-wrapper__col--number">1</div>
+                <div class="form-wrapper--mobile-left">
+                  <div class="form-wrapper__item">
+                    <div class="form-wrapper__label">№</div>
+                    <div class="form-wrapper__number">2</div> 
+                  </div>                               
                 </div>
-                <div class="form-wrapper__col form-wrapper__col--right">
-                  <input class="form-wrapper__input" type="text" id="surname-traveler" name="surname-traveler" form="review" placeholder="Иванов">
-                </div>
-              </div>
-              <div class="form-wrapper__row">       
-                <div class="form-wrapper__col form-wrapper__col--left"></div>
-                <div class="form-wrapper__col form-wrapper__col--right">
-                  <label class="form-wrapper__label" for="first-name-traveler">Имя:<span class="highlighted">*</span></label>
-                </div>
-              </div>
-              <div class="form-wrapper__row">
-                <div class="form-wrapper__col form-wrapper__col--left"></div>
-                <div class="form-wrapper__col form-wrapper__col--right">
-                  <input class="form-wrapper__input" type="text" id="first-name-traveler" name="first-name-traveler" form="review" placeholder="Петр">
-                </div>
-              </div>
-              <div class="form-wrapper__row">
-                <div class="form-wrapper__col form-wrapper__col--left"></div>
-                <div class="form-wrapper__col form-wrapper__col--right">
-                  <label class="form-wrapper__label" for="middle-name-traveler">Отчество:<span class="highlighted">*</span>
+                <div class="form-wrapper--mobile-right">
+                  <div class="form-wrapper__item ">
+                    <label class="form-wrapper__label" for="surname-traveler">Фамилия:</label>
+                    <input class="form-wrapper__input" type="text" id="surname-traveler" name="surname-traveler" form="review" placeholder="Иванов">
+                  </div>
+                  <div class="form-wrapper__item">
+                    <label class="form-wrapper__label" for="first-name-traveler">Имя:</label>
+                    <input class="form-wrapper__input" type="text" id="first-name-traveler" name="first-name-traveler" form="review" placeholder="Петр"> 
+                  </div>
+                  <div class="form-wrapper__item">
+                    <label class="form-wrapper__label" for="middle-name-traveler">Отчество:</label>
+                    <input class="form-wrapper__input" type="text" id="middle-name-traveler" name="middle-name-traveler" form="review" placeholder="Александрович">
+                  </div>
                 </div>
               </div>
-              <div class="form-wrapper__row">
-                <div class="form-wrapper__col form-wrapper__col--left"></div>
-                <div class="form-wrapper__col form-wrapper__col--right">
-                  <input class="form-wrapper__input" type="text" id="middle-name-traveler" name="middle-name-traveler" form="review" placeholder="Александрович">
-                </div>
-              </div>
-              <div class="form-wrapper__row">
-                <div class="form-wrapper__col form-wrapper__col--left">№</div>
-                <div class="form-wrapper__col form-wrapper__col--right">
-                  <label class="form-wrapper__label" for="surname-traveler">Фамилия:<span class="highlighted">*</span></label>
-                </div>
-              </div>
-              <div class="form-wrapper__row">
-                <div class="form-wrapper__col form-wrapper__col--left">
-                  <div class="form-wrapper__col--number">2</div>
-                </div>
-                <div class="form-wrapper__col form-wrapper__col--right">
-                  <input class="form-wrapper__input" type="text" id="surname-traveler" name="surname-traveler" form="review" placeholder="Иванов">
-                </div>
-              </div>
-              <div class="form-wrapper__row">
-                <div class="form-wrapper__col form-wrapper__col--left"></div>
-                <div class="form-wrapper__col form-wrapper__col--right">
-                  <label class="form-wrapper__label" for="first-name-traveler">Имя:<span class="highlighted">*</span></label>
-                </div>
-              </div>
-              <div class="form-wrapper__row">
-                <div class="form-wrapper__col form-wrapper__col--left"></div>
-                <div class="form-wrapper__col form-wrapper__col--right">
-                  <input class="form-wrapper__input" type="text" id="first-name-traveler" name="first-name-traveler" form="review" placeholder="Петр">
-                </div>
-              </div>
-              <div class="form-wrapper__row">
-                <div class="form-wrapper__col form-wrapper__col--left"></div>
-                <div class="form-wrapper__col form-wrapper__col--right">
-                  <label class="form-wrapper__label" for="middle-name-traveler">Отчество:<span class="highlighted">*</span>
-                </div>
-            </div>
-            <div class="form-wrapper__row">
-              <div class="form-wrapper__col form-wrapper__col--left"></div>
-              <div class="form-wrapper__col form-wrapper__col--right">
-                <input class="form-wrapper__input" type="text" id="middle-name-traveler" name="middle-name-traveler" form="review" placeholder="Александрович">
-              </div>
-            </div>
             </div>
           </fieldset>
           <fieldset class="form-review__fieldset">
             <legend class="form-review__legend">Посещенные достопримечательности:</legend>
             <div class="attraction">
-              <div class="attraction-item">
+              <div class="attraction__item">
                 <input class="attraction__input" type="checkbox" id="attraction-bridge" name="attraction-bridge" form="review" value="bridge" checked>
                 <label class="attraction__label" for="attraction-bridge">Мост Дъявола</label>
               </div>
-              <div class="attraction-item">
+              <div class="attraction__item">
                 <input class="attraction__input" type="checkbox" id="attraction-park" name="attraction-park" form="review" value="park">
                 <label class="attraction__label" for="attraction-park">Слайд-парк</label>
               </div>
-              <div class="attraction-item">
+              <div class="attraction__item">
                 <input class="attraction__input" type="checkbox" id="attraction-mountain" name="attraction-mountain" form="review" value="mountain" checked>
                 <label class="attraction__label" for="attraction-mountain">Гора-Колокол</label>
               </div>
-              <div class="attraction-item">
+              <div class="attraction__item">
                 <input class="attraction__input" type="checkbox" id="attraction-rocks" name="attraction-rocks" form="review" value="rocks" checked>
                 <label class="attraction__label" for="attraction-rocks">Красные скалы</label>
               </div>
@@ -196,36 +269,39 @@
           <fieldset class="form-review__fieldset">
             <legend class="form-review__legend">Загрузите фотографии:</legend>
             <div class="select-photos">
-              <label class="select-photos__label" for="select-file">Выбрать фотографии</label>
+              <label class="select-photos__label" for="select-file">
+                  <span class="select-photos__label--choose">Выбрать фотографии</span>
+                  <span class="select-photos__label--drag">Перетащите фотографии сюда</span>
+              </label>
               <input class="select-photos__button" id="select-file" type="file" accept="image/jpeg,image/jpg,image/png,image/gif">
             </div>
             <div class="download__photos">
               <div class="download__photo">
-                <img class="download__img" src="img/photo.png" alt="Фото" width="70" height="70">
+                <img class="download__img" src="img/photo.png" alt="Фото" width="100%" >
                 <button class="download__btn  download__btn--close"></button>
               </div>
               <div class="download__photo">
-                <img class="download__img" src="img/photo.png" alt="Фото" width="70" height="70">
+                <img class="download__img" src="img/photo.png" alt="Фото" width="100%">
                 <button class="download__btn  download__btn--close"></button>
               </div>
               <div class="download__photo">
-                <img class="download__img" src="img/photo.png" alt="Фото" width="70" height="70">
+                <img class="download__img" src="img/photo.png" alt="Фото" width="100%">
                 <button class="download__btn  download__btn--close"></button>
               </div>
               <div class="download__photo">
-                <img class="download__img" src="img/photo.png" alt="Фото" width="70" height="70">
+                <img class="download__img" src="img/photo.png" alt="Фото" width="100%">
                 <button class="download__btn  download__btn--close"></button>
               </div>
               <div class="download__photo">
-                <img class="download__img" src="img/photo.png" alt="Фото" width="70" height="70">
+                <img class="download__img" src="img/photo.png" alt="Фото" width="100%">
                 <button class="download__btn  download__btn--close"></button>
               </div>
               <div class="download__photo">
-                <img class="download__img" src="img/photo.png" alt="Фото" width="70" height="70">
+                <img class="download__img" src="img/photo.png" alt="Фото" width="100%">
                 <button class="download__btn  download__btn--close"></button>
               </div>
-              <div class="download__photo">
-                <img class="download__img" src="img/photo.png" alt="Фото" width="70" height="70">
+              <div class="download__photo download__photo--hidden">
+                <img class="download__img" src="img/photo.png" alt="Фото" width="100%">
                 <button class="download__btn  download__btn--close"></button>
               </div>
             </div>
@@ -234,11 +310,14 @@
         </form>
       </main>
       <footer class="page-footer">
-        <div class="hashtag">#visitsedona</div>
-        <div class="social-link">
+        <div class="page-footer__block hashtag">#visitsedona</div>
+        <div class="page-footer__block social-link">
           <a href="#" class="social-link__item social-link__tw"></a>
           <a href="#" class="social-link__item social-link__fb"></a>
           <a href="#" class="social-link__item social-link__youtube"></a>
+        </div>
+        <div class="page-footer__block developed">
+          <a href="#" class="developed">разработано <img src=""></a>
         </div>
       </footer>
     </div>
